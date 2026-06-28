@@ -35,19 +35,23 @@ pip install numpy matplotlib
 
 ## 💻 Kullanım
 
-Planlayıcıyı ve 3D simülasyonu başlatmak için proje ana dizininde şu komutu çalıştırmanız yeterlidir:
-
+### 1. Python & Matplotlib 3D Simülasyonu (Windows)
+Planlayıcıyı çalıştırıp hızlı Matplotlib 3D canlandırmasını başlatmak için:
 ```bash
 python main.py
 ```
 
-### Çıktı ve Görselleştirme:
-* **Gri Noktalar:** Nokta bulutu haritasındaki 3D engeller.
-* **Yeşil Daireler:** İHA'ların kalkış konumları (Start).
-* **Kırmızı Yıldızlar:** İHA'ların varış hedefleri (Goal).
-* **Renkli Hareketli Daireler:** 3D uzayda birbirleriyle veya engellerle çakışmadan hedeflerine doğru süzülen İHA'lar.
-
-Planlanan rotalar başarıyla hesaplandıktan sonra otomatik olarak `paths.json` dosyasına kaydedilir.
+### 2. ROS 2 & Gazebo 11 Simülasyonu (WSL2 / Linux)
+Simülasyonu gerçek fizik motoru ve 3D görselleştirme ile Gazebo'da çalıştırmak için:
+1. WSL2 Ubuntu terminalinizi açın.
+2. Proje dizinine gidin ve tek seferlik kurulum scriptini çalıştırın:
+   ```bash
+   bash install_ros_gazebo.sh
+   ```
+3. Kurulum tamamlandıktan sonra, simülasyonu derlemek ve başlatmak için şu komutu çalıştırın:
+   ```bash
+   bash build_and_run_gazebo.sh
+   ```
 
 ---
 
@@ -58,4 +62,8 @@ Planlanan rotalar başarıyla hesaplandıktan sonra otomatik olarak `paths.json`
 * `kinodynamic_astar.py` - Düşük seviyeli kinodinamik arama algoritması.
 * `collision_detector.py` - Engellerle ve diğer İHA'larla (downwash dahil) çarpışma kontrolleri.
 * `voxel_map.py` - PCD formatındaki 3D haritaları okuma ve voxel tabanlı sorgulama.
+* `pcd_to_gazebo.py` - PCD haritasını Gazebo 3D dünyasına (`cramped_env.world`) dönüştüren script.
+* `build_and_run_gazebo.sh` - Gazebo simülasyonunu derleyip başlatan kabuk betiği.
+* `install_ros_gazebo.sh` - ROS 2 ve Gazebo kurulum betiği.
+* `ros2_ws/` - Simülasyonun ROS 2 kaynak kodlarını içeren workspace klasörü (`src/multi_uav_sim`).
 * `Map/` - 3D nokta bulutu formatındaki harita verileri (`10X30m.pcd`).

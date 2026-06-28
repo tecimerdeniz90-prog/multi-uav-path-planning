@@ -17,3 +17,8 @@ multi-UAVs-path-planner-main/
 
 # Local planner outputs
 paths.json
+
+# ROS 2 workspace build files
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
