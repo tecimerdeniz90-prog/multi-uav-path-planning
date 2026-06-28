@@ -41,6 +41,9 @@ Planlayıcıyı çalıştırıp hızlı Matplotlib 3D canlandırmasını başlat
 python main.py
 ```
 
+**Planlama Çıktısı (Matplotlib):**
+![Matplotlib 3D Rotaları](Pictures/matplotlib_3d.png)
+
 ### 2. ROS 2 & Gazebo 11 Simülasyonu (WSL2 / Linux)
 Simülasyonu gerçek fizik motoru ve 3D görselleştirme ile Gazebo'da çalıştırmak için:
 1. WSL2 Ubuntu terminalinizi açın.
@@ -52,6 +55,9 @@ Simülasyonu gerçek fizik motoru ve 3D görselleştirme ile Gazebo'da çalışt
    ```bash
    bash build_and_run_gazebo.sh
    ```
+
+**Gazebo Simülasyon Çıktısı:**
+![Gazebo Simülasyonu](Pictures/gazebo_sim.png)
 
 ---
 
