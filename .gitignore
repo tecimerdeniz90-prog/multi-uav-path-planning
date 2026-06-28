@@ -1,0 +1,19 @@
+# Python caches and bytecode
+__pycache__/
+*.pyc
+
+# Build outputs and compiled files
+*.obj
+*.exe
+*.o
+
+# Compressed archives
+*.zip
+*.tar.gz
+*.rar
+
+# Ignore original multi-UAVs repository folder (large pcd maps and pictures)
+multi-UAVs-path-planner-main/
+
+# Local planner outputs
+paths.json
